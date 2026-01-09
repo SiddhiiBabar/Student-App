@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         SERVER_IP    = '13.53.70.69'
-        SSH_CRED_ID  = 'node-app-key'
+        SSH_CRED_ID  = 'Server.pem'
         TOMCAT_PATH  = '/var/lib/tomcat10/webapps'
         TOMCAT_SVC   = 'tomcat10'
     }
@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/iamtruptimane/student-app.git'
+                git branch: 'master', url: 'https://github.com/SiddhiiBabar/Student-App.git'
             }
         }
 
